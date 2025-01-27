@@ -846,6 +846,8 @@ Device::BuiltinAction start_recovery(Device* device, const std::vector<std::stri
     "Version " + android::base::GetProperty("ro.aurora.base.version", "(unknown)") +
         " (" + ver_date + ")",
   };
+  std::string package_type = android::base::GetProperty("ro.aurora.packagetype", "(unknown)");
+  title_lines.push_back("Package type - " + package_type);
   title_lines.push_back("Product name - " + android::base::GetProperty("ro.product.device", ""));
   if (android::base::GetBoolProperty("ro.build.ab_update", false)) {
     std::string slot = android::base::GetProperty("ro.boot.slot_suffix", "");
