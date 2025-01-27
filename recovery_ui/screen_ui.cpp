@@ -576,10 +576,11 @@ void ScreenRecoveryUI::draw_foreground_locked() {
   }
 }
 
-/* recovery dark:  #7C4DFF
-   recovery light: #F890FF
-   fastbootd dark: #E65100
-   fastboot light: #FDD835 */
+/* 
+   recovery dark:  #8CdCC6
+   recovery light: #AEE6D7
+   fastbootd dark: #E18585
+   fastboot light: #EAA9A9 */
 void ScreenRecoveryUI::SetColor(UIElement e) const {
   switch (e) {
     case UIElement::BATTERY_LOW:
@@ -590,15 +591,15 @@ void ScreenRecoveryUI::SetColor(UIElement e) const {
       break;
     case UIElement::INFO:
       if (fastbootd_logo_enabled_)
-        gr_color(0xfd, 0xd8, 0x35, 255);
+        gr_color(0xea, 0xa9, 0xa9, 255);
       else
-        gr_color(0xf8, 0x90, 0xff, 255);
+        gr_color(0xae, 0xe6, 0xd7, 255);
       break;
     case UIElement::HEADER:
       if (fastbootd_logo_enabled_)
-        gr_color(0xfd, 0xd8,0x35, 255);
+        gr_color(0xea, 0xa9, 0xa9, 255);
       else
-        gr_color(0xf8, 0x90, 0xff, 255);
+        gr_color(0xae, 0xe6, 0xd7, 255);
       break;
     case UIElement::MENU:
       gr_color(0xd8, 0xd8, 0xd8, 255);
@@ -606,9 +607,9 @@ void ScreenRecoveryUI::SetColor(UIElement e) const {
     case UIElement::MENU_SEL_BG:
     case UIElement::SCROLLBAR:
       if (fastbootd_logo_enabled_)
-        gr_color(0xe6, 0x51, 0x00, 255);
+        gr_color(0xe1, 0x85, 0x85, 255);
       else
-        gr_color(0x7c, 0x4d, 0xff, 255);
+        gr_color(0x8c, 0xdc, 0xc6, 255);
       break;
     case UIElement::MENU_SEL_BG_ACTIVE:
       gr_color(0, 156, 100, 255);
@@ -617,7 +618,7 @@ void ScreenRecoveryUI::SetColor(UIElement e) const {
       if (fastbootd_logo_enabled_)
         gr_color(0, 0, 0, 255);
       else
-        gr_color(0xd8, 0xd8, 0xd8, 255);
+        gr_color(56, 88, 79, 255);
       break;
     case UIElement::LOG:
       gr_color(196, 196, 196, 255);
@@ -626,7 +627,7 @@ void ScreenRecoveryUI::SetColor(UIElement e) const {
       gr_color(0, 0, 0, 160);
       break;
     default:
-      gr_color(255, 255, 255, 255);
+      gr_color(56, 88, 79, 255);
       break;
   }
 }
